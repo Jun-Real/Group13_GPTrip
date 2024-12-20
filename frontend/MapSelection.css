@@ -1,0 +1,144 @@
+.map-selection-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+}
+
+.map-container {
+  max-width: 800px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: relative;
+}
+
+.map-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.japan-map {
+  width: 100%;
+  height: auto;
+}
+
+.region {
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.region:hover {
+  opacity: 0.8;
+}
+
+.region.hovered {
+  opacity: 0.7;
+}
+
+.region.selected {
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.region-info {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.region-info h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.region-info ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.region-info li {
+  margin-bottom: 5px;
+}
+
+.selection-info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.next-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.next-button:hover {
+  background-color: #45a049;
+}
+
+.next-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #ff0000;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.analysis-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  10%, 90% { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .map-container {
+    padding: 10px;
+  }
+
+  .map-title {
+    font-size: 1.2em;
+  }
+
+  .region-info {
+    font-size: 0.9em;
+  }
+
+  .next-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+

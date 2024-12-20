@@ -29,7 +29,7 @@ from sqlalchemy.sql import func
 import random
 from fastapi import Query
 
-GMAP_API_KEY = "필요"
+GMAP_API_KEY = "AIzaSyDbNb_h1RT5vUhywnigScdzZQQZVV-NuUE"
 # API 할당 필요
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -342,7 +342,7 @@ app = FastAPI()
 # CORS setup
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://crispy-adventure-wr74x4pxpwr7cg56v-3000.app.github.dev"],
+    allow_origins=["http://localhost:3000/"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
